@@ -1,0 +1,3 @@
+== Welcome to Smashingtwitter
+
+Smashingtwitter is a YATSA (which stands for Yet Another Twitter Searching Application)
