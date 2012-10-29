@@ -1,0 +1,7 @@
+%form.form-search.coolform{action: twits_path, method: :get}
+  .row
+    .span5.offset3.input_with_placeholder
+      %label{for: "searchbox"} search for twits using this form
+      %input#searchbox.input-medium.search-query{type: "text", name: "q", value: params[:q]}
+    .span1
+      %button.btn{type: "submit"} Search

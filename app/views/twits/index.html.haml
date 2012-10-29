@@ -1,0 +1,17 @@
+= render partial: "layouts/search_form"
+%ul.twits{id: "t#{@max_id}"}
+
+  - @twits.each do |twit|
+    %li
+      -#{style: "width: #{twit[:size]}px;"}
+      .twit
+        = image_tag twit[:user_pic], alt: twit[:user_name], size: "48x48"
+        .name= twit[:user_name]
+        .text= twit[:text]
+        -#/
+        -#  #{twit[:debug]}
+
+
+.load_more_twits
+  = link_to "Load some more...", twits_path(q: params[:q], max_id: @max_id-1)
+  = image_tag "loading.gif", alt: "loading...", style: "display: none;"

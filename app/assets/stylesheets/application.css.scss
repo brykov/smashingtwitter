@@ -1,0 +1,74 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+ul.twits {
+  padding: 2em 0;
+  margin: 0;
+  list-style: none none outside;
+  border-bottom: 1px dashed #a0a0a0;
+  overflow: hidden;
+  li {
+    float: left;
+    .twit {
+      border: 1px solid #b1b1b1;
+      padding: 5px 5px 5px 60px;
+      margin: .2em;
+      min-height: 60px;
+      overflow: hidden;
+      font-size: 90%;
+      width: 220px;
+
+      .name {
+        font-weight: bold;
+        line-height: 2em;
+      }
+
+      img {
+        display: block;
+        float: left;
+        margin-left: -55px;
+      }
+    }
+  }
+}
+
+.load_more_twits {
+  text-align: center;
+  margin: 2em 0;
+  font-size: 200%;
+
+}
+
+.search-query {
+  width: 95% !important;
+}
+
+form.coolform {
+  .input_with_placeholder {
+    position: relative;
+    //width: 100%;
+    display: -moz-inline-box;
+    -moz-box-orient: vertical;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *display: inline;
+    label {
+      position: absolute;
+      cursor: text;
+      margin: 4px 15px;
+      color: #bbb;
+    }
+  }
+}

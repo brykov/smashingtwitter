@@ -13,4 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require jquery.masonry.min
+//= require jquery.scrollTo-1.4.3.1-min
 //= require_tree .

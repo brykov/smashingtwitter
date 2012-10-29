@@ -60,4 +60,6 @@ Smashingtwitter::Application.routes.draw do
 
   root to: "home#index"
 
+  resources :twits, only: [:index]
+
 end
