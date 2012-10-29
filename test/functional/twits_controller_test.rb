@@ -11,9 +11,5 @@ class TwitsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:twits)
   end
 
-  test "should show twit" do
-    get :show, id: @twit
-    assert_response :success
-  end
 
 end
