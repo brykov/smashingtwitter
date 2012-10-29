@@ -18,7 +18,6 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 
-  gem 'twitter-bootstrap-rails'
 end
 
 gem 'jquery-rails'
@@ -41,3 +40,4 @@ gem 'jquery-rails'
 
 gem 'haml-rails'
 gem 'twitter'
+gem 'twitter-bootstrap-rails'
