@@ -9,8 +9,21 @@ The applications uses Twitter API and relies on the following environment variab
     TWITTER_OAUTH_TOKEN
     TWITTER_OAUTH_TOKEN_SECRET
 
-Thus in order to launch the app these variables have to be specified like following:
+Thus in order to launch the app these variables have to be specified as following:
 
     TWITTER_CONSUMER_KEY=<key> TWITTER_OAUTH_TOKEN_SECRET=<token-secret> TWITTER_CONSUMER_SECRET=<secret> TWITTER_OAUTH_TOKEN=<token> rails s
 
-In order to run it on heroku
+In order to run it on heroku you have to create heroku app:
+
+    heroku create smashingtwitter
+
+Then set the environment variables:
+
+    heroku config:set TWITTER_CONSUMER_KEY=...
+    heroku config:set TWITTER_CONSUMER_SECRET=...
+    heroku config:set TWITTER_OAUTH_TOKEN=...
+    heroku config:set TWITTER_OAUTH_TOKEN_SECRET=...
+
+Then deploy the app:
+
+    git push heroku master
