@@ -1,3 +1,16 @@
 == Welcome to Smashingtwitter
 
-Smashingtwitter is a YATSA (which stands for Yet Another Twitter Searching Application)
+Smashingtwitter is a YATSA (Yet Another Twitter Searching Application)
+
+The applications uses Twitter API and relies on the following environment variables:
+
+    TWITTER_CONSUMER_KEY
+    TWITTER_CONSUMER_SECRET
+    TWITTER_OAUTH_TOKEN
+    TWITTER_OAUTH_TOKEN_SECRET
+
+Thus in order to launch the app these variables have to be specified like following:
+
+    TWITTER_CONSUMER_KEY=<key> TWITTER_OAUTH_TOKEN_SECRET=<token-secret> TWITTER_CONSUMER_SECRET=<secret> TWITTER_OAUTH_TOKEN=<token> rails s
+
+In order to run it on heroku
