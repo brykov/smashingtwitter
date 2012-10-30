@@ -19,7 +19,6 @@ class TwitsController < ApplicationController
 
     @twits = search.statuses.map do |status|
       @max_id = [@max_id, status.id].min
-      #size = 165+165*(status.text.length/100).round
       status.urls.each { |url| status.text.gsub!(url.url, link_to(url.url, url.expanded_url, target: "_blank")) }
       status.user_mentions.each { |mention| status.text.gsub!("@#{mention.screen_name}", link_to("@#{mention.screen_name}", "https://twitter.com/#{mention.screen_name}", target: "_blank"))  }
       status.hashtags.each { |hashtag| status.text.gsub!("##{hashtag.text}", link_to("##{hashtag.text}", "https://twitter.com/search?#{hashtag.text.to_query('q')}&src=hash", target: "_blank"))  }
@@ -27,8 +26,7 @@ class TwitsController < ApplicationController
           text: status.text.html_safe,
           user_pic: status.user.profile_image_url,
           user_name: status.user.screen_name,
-          #debug: status.to_yaml,
-          #size: size
+          id: status.id
       }
     end
 

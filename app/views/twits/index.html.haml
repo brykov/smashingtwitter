@@ -3,13 +3,10 @@
 
   - @twits.each do |twit|
     %li
-      -#{style: "width: #{twit[:size]}px;"}
-      .twit
+      .twit{id: "t#{twit[:id]}"}
         = image_tag twit[:user_pic], alt: twit[:user_name], size: "48x48"
         .name= twit[:user_name]
         .text= twit[:text]
-        -#/
-        -#  #{twit[:debug]}
 
 
 .load_more_twits
