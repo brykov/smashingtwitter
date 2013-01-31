@@ -30,6 +30,6 @@ Then deploy the app:
 
 === Testing
 
-The app is bundled with guard gem that allows background testing. Inorder to run the testing use the following command:
+The app is bundled with guard gem that allows background testing. In order to run the testing use the following command:
 
     TWITTER_CONSUMER_KEY=... TWITTER_OAUTH_TOKEN_SECRET=... TWITTER_CONSUMER_SECRET=... TWITTER_OAUTH_TOKEN=... guard -i
